@@ -17,17 +17,23 @@ public class Ejemplo03 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
+        
+        // variables
         String cadenaFinal = "";
         double nota;
         boolean bandera = true;
         int salida;
+        double suma= 0 ;
+        
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, nota);
-
+            suma = suma + nota;
             System.out.println("Ingrese (-111) si desea salir del ciclo ");
             salida = entrada.nextInt();
+            
+            
 
             if (salida == -111) {
                 bandera = false;
@@ -35,6 +41,12 @@ public class Ejemplo03 {
 
         } while (bandera); // (bandera==true)
         
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        
+        
+         System.out.printf("Listado de Notas\n%s\nsuma de notas\n%s\n",
+                 cadenaFinal, suma);
+       
+        
+        
     }
 }

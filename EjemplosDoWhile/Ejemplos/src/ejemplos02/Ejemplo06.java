@@ -28,17 +28,22 @@ public class Ejemplo06 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
+        
+        int limite;
         int tabla;
         int operacion;
         int contador = 1;
         System.out.println("Ingrese la tabla a generar");
         tabla = entrada.nextInt();
+        
+        System.out.println("Ingrese el limite de la tabla");
+        limite = entrada.nextInt();
 
         do {
             operacion = tabla * contador;
             System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
             contador = contador + 1;
-        } while (contador <= 10);
+        } while (contador <= limite);
 
     }
 }
